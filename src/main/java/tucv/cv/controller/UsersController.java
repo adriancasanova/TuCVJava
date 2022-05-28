@@ -16,7 +16,7 @@ import java.util.List;
 
 @RestController
 //@CrossOrigin (origins = "http://localhost:4200")
-@CrossOrigin (origins = "https://tucv-a4ab0.web.app/")
+@CrossOrigin (origins = "https://tucv-a4ab0.web.app")
 public class UsersController {
    
     @Autowired
@@ -36,7 +36,7 @@ public class UsersController {
         return usuarioId != null;
     }
 
-    @RequestMapping(value = "crear/usuarios", method = RequestMethod.POST)
+    @RequestMapping(value = "/registro", method = RequestMethod.POST)
     public void registrarUsuario(@RequestBody Users usuario) {
         Argon2 argon2 = Argon2Factory.create(Argon2Factory.Argon2Types.ARGON2id);
         String hash = argon2.hash(1, 1024, 1, usuario.getPassword());

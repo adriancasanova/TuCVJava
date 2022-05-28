@@ -39,7 +39,7 @@ private IContactoService educacionServ;
   }
 
   @DeleteMapping ("/home/contacto/{id}") 
-  public void borrarEducacion (@PathVariable Long id){
+  public void borrarContacto (@PathVariable Long id){
   educacionServ.borrarContacto(id);
   }  
   

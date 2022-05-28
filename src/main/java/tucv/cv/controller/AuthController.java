@@ -16,13 +16,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
  // @CrossOrigin (origins = "http://localhost:4200")
-  @CrossOrigin (origins = "https://tucv-a4ab0.web.app/") 
+  @CrossOrigin (origins = "https://tucv-a4ab0.web.app") 
 public class AuthController {
     @Autowired
     private IUsersService usuarioDao;  
     @Autowired
     private JWTUtil jwtUtil;
-    @RequestMapping(value = "home/users", method = RequestMethod.POST)
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String login(@RequestBody Users usuario) {
         Users usuarioLogueado = usuarioDao.obtenerUsuarioPorCredenciales (usuario);
         if (usuarioLogueado != null) {
