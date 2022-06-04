@@ -5,7 +5,6 @@
 package tucv.cv.controller;
 import tucv.cv.service.IUsersService;
 import tucv.cv.model.Users;
-import tucv.cv.service.UsersService;
 import tucv.cv.utils.JWTUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -15,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
- // @CrossOrigin (origins = "http://localhost:4200")
+  //@CrossOrigin (origins = "http://localhost:4200")
   @CrossOrigin (origins = "https://tucv-a4ab0.web.app") 
 public class AuthController {
     @Autowired
@@ -29,6 +28,6 @@ public class AuthController {
             String tokenJwt = jwtUtil.create(String.valueOf(usuarioLogueado.getId()), usuarioLogueado.getEmail());
             return tokenJwt;
         }
-        return "FAIL";
+        return /*"FAIL"*/ null;
     }
 }

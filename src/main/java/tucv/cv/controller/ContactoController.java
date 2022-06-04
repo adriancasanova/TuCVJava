@@ -21,7 +21,7 @@ import tucv.cv.service.ContactoService;
 //import tucv.cv.service.MailService;
 
   @RestController  
-// @CrossOrigin (origins = "http://localhost:4200")
+ //@CrossOrigin (origins = "http://localhost:4200")
   @CrossOrigin (origins = "https://tucv-a4ab0.web.app/")
 
 public class ContactoController {
