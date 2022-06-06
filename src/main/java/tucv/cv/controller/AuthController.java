@@ -21,7 +21,7 @@ public class AuthController {
     private IUsersService usuarioDao;  
     @Autowired
     private JWTUtil jwtUtil;
-    @RequestMapping(value = "/home/login", method = RequestMethod.POST)
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String login(@RequestBody Users usuario) {
         Users usuarioLogueado = usuarioDao.obtenerUsuarioPorCredenciales (usuario);
         if (usuarioLogueado != null) {
